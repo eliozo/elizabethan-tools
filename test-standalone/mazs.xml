@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<doc>
+    <info id_reference="2">
+        <data_down>
+            <tree>
+                <box_id>046071598600870568</box_id>
+                <parent_box_id>046071598600875594</parent_box_id>
+            </tree>
+            <tree>
+                <box_id>046071598600870575</box_id>
+                <parent_box_id>046071598600875595</parent_box_id>
+            </tree>
+            <tree>
+                <sgtin>
+                    <info_sgtin>
+                        <sgtin>04607008133585B0SE1HVHBGR3A</sgtin>
+                        <box_id>046071598600870568</box_id>
+                        <gtin>04607008133585</gtin>
+                        <series_number>026A</series_number>
+                    </info_sgtin>
+                </sgtin>
+                <parent_box_id>046071598600870568</parent_box_id>
+            </tree>
+            <tree>
+                <sgtin>
+                    <info_sgtin>
+                        <sgtin>046070081335856F7P78HBVBEH2</sgtin>
+                        <box_id>046071598600870568</box_id>
+                        <gtin>04607008133585</gtin>
+                        <series_number>026A</series_number>
+                    </info_sgtin>
+                </sgtin>
+                <parent_box_id>046071598600870568</parent_box_id>
+            </tree>
+            <tree>
+                <sgtin>
+                    <info_sgtin>
+                        <sgtin>046070081335854T61H7CSXDE9W</sgtin>
+                        <box_id>046071598600870575</box_id>
+                        <gtin>04607008133585</gtin>
+                        <series_number>026A</series_number>
+                    </info_sgtin>
+                </sgtin>
+                <parent_box_id>046071598600870575</parent_box_id>
+            </tree>
+        </data_down>
+    </info>
+</doc>
