@@ -7,8 +7,8 @@ import xml.etree.ElementTree
 def xliff_translate(text): #funkcija sarunājas ar tildi - iztulko no angļu uz latviešu
     print('Text = {} '.format(text))
 
-    client_id = 'u-cd5c7af7-a972-4bea-b122-4ba60a6b7325'
-    system_id = 'smt-ad429a53-17cd-44af-affe-b684cf65f9ae'
+    client_id = '123'
+    system_id = '456'
     response = requests.post('https://www.letsmt.eu/ws/service.svc/json/TranslateEx',
                              headers={'Content-Type': 'application/json',
                                       'client-id': client_id},
