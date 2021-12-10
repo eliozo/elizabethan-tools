@@ -3,13 +3,11 @@
 * Uz mark-down faila Tikal filtrs strādā
 
 ```
-
-tikal.bat -x *.md
 tikal.bat -x -sl EN tl LV file1.md 
+python tulkotajs.py ...? 
 tikal.bat -m manual.md.xlf -sl EN -tl LV -ie utf-8
 pandoc -s -o manual_en.docx file1.md
 pandoc -s -o manual_lv.docx manual.out.md
-
 ```
 
 * Matemātikas formulas un marķējumi varētu būt salūzuši (?)
