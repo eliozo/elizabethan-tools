@@ -22,3 +22,13 @@ pandoc -s -o manual_lv.docx manual.out.md
 * Pielāgot XLIFF extraction arī REVEAL.JS slaidiem
 * Pielāgot XLIFF extraction PowerPoint notes sadaļās dzīvojošajam mark-down
 * Izmēģināt citas Tikal komandas, izņemot extraction 
+
+# 22.11.2021
+
+* Extract and merge
+
+```
+tikal.bat -x file1.md
+tikal.bat -m file1.md.xlf
+```
+
