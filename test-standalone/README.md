@@ -3,11 +3,11 @@
 * Uz mark-down faila Tikal filtrs strādā
 
 ```
-tikal.bat -x -sl EN -tl LV ../test-standalone/data_structures/Airports.md 
-python tulkotajs.py ../test-standalone/data_structures/Airports.md.xlf  
-tikal.bat -m ../test-standalone/data_structures/Airports.md.xlf -sl EN -tl LV -ie utf-8
-pandoc -s -o ../test-standalone/data_structures/Airports_en.docx ../test-standalone/data_structures/Airports.md
-pandoc -s -o ../test-standalone/data_structures/Airports_lv.docx ../test-standalone/data_structures/Airports.out.md
+tikal.bat -x -sl EN -tl LV manual.md 
+tulkot.bat manual.md.xlf  
+tikal.bat -m manual.md.xlf -sl EN -tl LV -ie utf-8
+pandoc -s -o manual_en.docx manual.md
+pandoc -s -o manual_lv.docx manual.out.md
 ```
 
 * Matemātikas formulas un marķējumi varētu būt salūzuši (?)
