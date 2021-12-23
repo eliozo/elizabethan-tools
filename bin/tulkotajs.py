@@ -61,19 +61,6 @@ def xliff_translate(text): #funkcija sarunājas ar tildi - iztulko no angļu uz 
     return t2
 
 def main():
-    # namespaces = {'default': 'urn:oasis:names:tc:xliff:document:1.2',
-    #               'okp': 'okapi-framework:xliff-extensions',
-    #               'its': 'http://www.w3.org/2005/11/its',
-    #               'itsxlf': 'http://www.w3.org/ns/its-xliff/'}
-
-    # text = "$999$ aaa $1$ 333"
-    # global id_dict
-    # text = replace_tex_by_id(text)
-    # print(text)
-    # print(id_dict)
-
-
-    #filename = '../test-standalone/manual.md.xlf'
     if len(sys.argv) < 2:
         print ("Kļūda! Vajag norādīt faila vārdu!")
         exit(1)
@@ -88,20 +75,7 @@ def main():
     for chunk in rx_source.finditer(xliff):
         translation = xliff_translate(chunk.group(1))
         time.sleep(0.5)
-        # print("1111111111111111111111111111111111111111")
-        # print(translation)
-        # print("22222222222222222222222222222222222222222")
-        # print(chunk.group(1))
-        # print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
         xliff_translated = xliff_translated.replace(chunk.group(1) + "</target>", translation + "</target>")
-        # print(xliff_translated)
-    #print(xliff_translated)
-    #save_path = (os.path.dirname(os.path.realpath(__file__)))
-    #completeName = os.path.join(save_path, sys.argv[1])
-    #text_file = open("C:/Users/eliz_/Documents/elizabethan-tools/test-standalone/data_structures/translated_airports.md.xlf", "wb")
-    # text_file = open(completeName, "wb")
-    # text_file.write(xliff_translated.encode('utf-8')) #vajadzētu saprast, kāpēc neieraksta xlf_translated strigu failā
-    # text_file.close()
     print(sys.argv[1])
     with open(sys.argv[1], 'wb') as f:
         f.write(xliff_translated.encode('utf-8'))
