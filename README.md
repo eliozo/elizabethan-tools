@@ -20,7 +20,8 @@ pandoc un Tildes mašīntulkotāju (vairāk var uzzināt šeit: `https://github.
 
 ### Sākotnējā konfigurācija
 
-Projektu pārkopē caur `git clone`. Pirms lietošanas jāuzstāda fails `bin/properties.txt`.  
+Lai sāktu konfigurāciju, ir jābūt ieinstalētam Git. 
+Projektu pārkopē ar komandu `git clone https://github.com/eliozo/elizabethan-tools`. Pirms lietošanas jāuzstāda fails `bin/properties.txt`.  
 
 ```txt
 [your-config]
