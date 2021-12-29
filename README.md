@@ -3,7 +3,7 @@
 
 ## Cilvēka vadīta mācību materiālu automatizēta tulkošana
 
-**Elizabete Ozoliņa, 2.kurss**
+**Elizabete Ozoliņa, Latvijas Universitātes Datorikas fakultātes BSP 2.kursa studente**
 
 **Apraksts.**
 
