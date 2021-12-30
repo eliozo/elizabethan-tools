@@ -74,6 +74,13 @@ def main():
     rx_source = re.compile(r'<source xml:lang="en">((.|\n|\r)*?)</source>', re.MULTILINE)
     for chunk in rx_source.finditer(xliff):
         translation = xliff_translate(chunk.group(1))
+        # translation = translation.replace("   ", "  \r\n")
+        # tris_tuksumi = bytes.fromhex('202020')
+        # divi_tuksumi = bytes.fromhex('20200D0A')
+        # translation_bytes = translation.encode()
+        # print(translation_bytes)
+        # translation_bytes.replace(tris_tuksumi, divi_tuksumi)
+        # translation = translation_bytes.decode()
         time.sleep(0.5)
         xliff_translated = xliff_translated.replace(chunk.group(1) + "</target>", translation + "</target>")
     print(sys.argv[1])

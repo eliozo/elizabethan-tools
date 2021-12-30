@@ -11,7 +11,7 @@
 Aplūkojamie piemēri ir datorikas mācību materiāli, piemēram, datu struktūru uzdevumu apraksti,
 diskrētās matemātikas lekciju pieraksti.
 Dokumenta oriģināls ir Markdown fails angļu valodā un tiek tulkots uz latviešu valodu.
-Iegūstamie gala formāti: `.docx`,`.pdf`, `.html`
+Iegūstamie gala formāti: `.docx`, `.pdf`, `.html`
 
 ## Rīka apraksts
 
@@ -27,9 +27,9 @@ Pirms lietošanas jāuzstāda fails `bin/properties.txt`.
 
 ```txt
 [your-config]
-client_id = '...................'
-system_id = '...................'
-service_url = '.................'
+client_id = ...................
+system_id = ...................
+service_url = .................
 ```
 
 ### Rīka darbināšana
@@ -43,6 +43,7 @@ Komandas ir jāizpilda tajā direktorijā, kurā atrodas izvēlētais Markdown f
 tikal.bat -x -sl EN -tl LV manual.md 
 tulkot.bat manual.md.xlf  
 tikal.bat -m manual.md.xlf -sl EN -tl LV -ie utf-8
+salabot.bat manual.out.md // Plānots salabot '$ $' -> '$$' un '   ' -> '  \r\n'
 pandoc -s -o manual_en.docx manual.md
 pandoc -s -o manual_lv.docx manual.out.md
 ```
