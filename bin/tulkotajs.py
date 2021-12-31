@@ -3,10 +3,6 @@ import configparser
 import requests
 import time
 import sys
-import json
-import os
-#from xml.dom import minidom
-import xml.etree.ElementTree
 import re
 
 id_dict = dict() # vārdnīca atbilstošajām id formulām
