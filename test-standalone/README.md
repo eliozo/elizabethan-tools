@@ -1,19 +1,18 @@
-## Todo list
+## Todo list: 26.01.2022
 
-* Saprast, vai mēs varam mark-down filtru konfigurēt un papildināt
-* Pielāgot XLIFF extraction arī REVEAL.JS slaidiem
+* Saprast, vai mēs varam mark-down filtru konfigurēt un papildināt.
+  Piemēram, rindu pārnesumi manuāli jāpielabo (ar regex aizvietošanu, lai to dara Tikal).
+* Pielāgot XLIFF extraction arī REVEAL.JS slaidiem.
+  Piemēram, tulkot no LV uz EN skolas matemātikas prezentācijas.
 * Pielāgot XLIFF extraction PowerPoint notes sadaļās dzīvojošajam mark-down
-* Izmēģināt citas Tikal komandas, izņemot extraction 
 
-# 22.11.2021
+  1. Pielāgot skriptu tulkotajs.py, kurš šobrīd tikai ar Mark-down strādā
+  2. Pamēģināt izveidot bukletu no power-point slaidiem. (pdf formātā)
 
-* Extract and merge
+* Automātiskos testus - python testi, vai pareizi pielabota tulkotajs.py loģika (neizsaucot Tildes tulku)
+* Iekš tulkotajs.py sākt izmantot XML parsēšanai
 
-```
-tikal.bat -x file1.md
-tikal.bat -m file1.md.xlf
-```
-# 7.01.2022
+# 7.01.2022 Intervijas plāns
 * Kādu master faila formātu jūs izmantojat? (Master formāts - dokumenta galvenā kopija, kuru autors tieši rediģē)
   (pdf, word, powerpoint, markdown, manuāli izveidots html, LaTeX, DocBook/DITA, Restructured text (RST), wiki formāts)
 * Kādus atvasinātos formātus jūs veidojat no master formāta? (.pdf, .html, word, mobilo ierīču saturs)
@@ -30,5 +29,9 @@ tikal.bat -m file1.md.xlf
   jeb hipersaites no viena dokumenta vietas uz citu.
 * Kas līdzšinējā pieejā patērē daudz laika, sastādot mācību materiālus un kādas problēmas gribētos novērst?
 * Vai labāk, ja rīks ir pieejams no komandrindas vai tīmekļa interfeisā? (kas iztulko un ļauj lejupielādēt tulkojumu)
-
+ 
+## Uzaicinājums uz sarunu
+* Vai Jūs izmantojat līdzīgus mācību materiālus, kas ir paralēli iztulkoti angļu/latviešu valodās?
+* Vai Jums interesētu izmantot Tildes mašīntehnoloģijas, kas atvieglotu mācību materiālu tulkošanu?
+* Vai ar Jums var sazināties, lai uzdotu vairāk jautājumus par šo tēmu?
 

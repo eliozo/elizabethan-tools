@@ -36,14 +36,17 @@ service_url = .................
 
 Pievienot `bin` direktoriju savam `PATH` mainīgajam.
 
+Atveriet Anaconda konsoli.
+
 Pēc tam palaist šīs komandas. `manual.md` vietā var ielikt jebkuru Markdown failu angļu valodā.
 Komandas ir jāizpilda tajā direktorijā, kurā atrodas izvēlētais Markdown fails.
+
 
 ```
 tikal.bat -x -sl EN -tl LV manual.md 
 tulkot.bat manual.md.xlf  
 tikal.bat -m manual.md.xlf -sl EN -tl LV -ie utf-8
-salabot.bat manual.out.md // Plānots salabot '$ $' -> '$$' un '   ' -> '  \r\n'
+rem salabot.bat manual.out.md // Plānots salabot '$ $' -> '$$' un '   ' -> '  \r\n'
 pandoc -s -o manual_en.docx manual.md
 pandoc -s -o manual_lv.docx manual.out.md
 ```

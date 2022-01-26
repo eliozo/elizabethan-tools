@@ -8,12 +8,23 @@ import re
 id_dict = dict() # vārdnīca atbilstošajām id formulām
 def replace_tex_by_id(text):
     global id_dict
-    pattern = re.compile(r"\$[^\$]+\$")
+    count = 1  # skaitītājs unikālu id veidošanai
+
+    pattern_block = re.compile(r"\$\$[^\$]+\$\$") # meklējam visas block latex formulas
+    formulas_block = pattern_block.findall(text)
+    for formula in formulas_block:
+        current_id = "§id{}§".format(count)
+        id_dict[current_id] = formula
+        # aizstāj formulu tikai 1 reizi
+        text = text.replace(formula, current_id, 1)
+        count +=1
+
+    pattern = re.compile(r"\$[^\$]+\$") # meklējam visas inline latex formulas
     formulas = pattern.findall(text)
-    count = 1
     for formula in formulas:
         current_id = "§id{}§".format(count)
         id_dict[current_id] = formula
+        # aizstāj formulu tikai 1 reizi
         text = text.replace(formula, current_id, 1)
         count +=1
     return text
@@ -70,13 +81,7 @@ def main():
     rx_source = re.compile(r'<source xml:lang="en">((.|\n|\r)*?)</source>', re.MULTILINE)
     for chunk in rx_source.finditer(xliff):
         translation = xliff_translate(chunk.group(1))
-        # translation = translation.replace("   ", "  \r\n")
-        # tris_tuksumi = bytes.fromhex('202020')
-        # divi_tuksumi = bytes.fromhex('20200D0A')
-        # translation_bytes = translation.encode()
-        # print(translation_bytes)
-        # translation_bytes.replace(tris_tuksumi, divi_tuksumi)
-        # translation = translation_bytes.decode()
+        print('Translation = {} '.format(translation))
         time.sleep(0.5)
         xliff_translated = xliff_translated.replace(chunk.group(1) + "</target>", translation + "</target>")
     print(sys.argv[1])
