@@ -46,7 +46,7 @@ Komandas ir jāizpilda tajā direktorijā, kurā atrodas izvēlētais Markdown f
 tikal.bat -x -sl EN -tl LV manual.md 
 tulkot.bat manual.md.xlf  
 tikal.bat -m manual.md.xlf -sl EN -tl LV -ie utf-8
-rem salabot.bat manual.out.md // Plānots salabot '   ' -> '  \r\n'
+salabot.bat manual.out.md
 pandoc -s -o manual_en.docx manual.md
 pandoc -s -o manual_lv.docx manual.out.md
 ```

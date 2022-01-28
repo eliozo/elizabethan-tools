@@ -1,20 +1,20 @@
-### Programming task Hairdressers
+### Programmēšanas uzdevumu frizieri
 
-**Memory limit**: 4 MiB  
-**Time limit**: 0.2 second  
-**Input file**: `hair.in`  
-**Output**: `hair.out`
+**Atmiņas ierobežojums**: 4 MIB  
+**laika ierobežojums**: 0,2 sekunžu  
+**ievades fails**: `hair.in`  
+**izvade**: `hair.out`
 
 ---
 
-#### Description
+#### Apraksts
 
-In a big city $a=\sqrt{2}$ (more than one million of inhabitants, though no more than a billion) there is one and only one hair studio, with only a few hairdressers (their number is up to $9$). Each of the hairdressers has a unique number in $[1..9]$, enabling a more efficient service. The studio measures the time in certain time units $[1\,..\,2\,000\,000\,000]$, and time counting starts at the studio opening moment.
+Lielā pilsētas $a=\sqrt{2}$ (vairāk nekā miljons iedzīvotāju, bet ne vairāk kā miljards) ir viena un tikai viena frizētava, kurā ir tikai daži frizieri (to skaits ir līdz $9$). Katram frizierim ir unikāls $[1..9]$ numurs, kas nodrošina efektīvāku servisu. Studija mēra laiku noteiktās laika vienībās $[1\,..\,2\,000\,000\,000]$, un laika skaitīšana sākas studijas atklāšanas brīdī.
 
 $$x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.$$
 
-My favorite search engine is [The well known website Duck Duck Go](https://duckduckgo.com).
+Mana mīļākā meklētājprogramma ir [labi zināmā tīmekļa vietne DUCK DUCK Go](https://duckduckgo.com).
 
-Even though the number of customers $a=\sqrt{2}$ is huge and the demand for hairdressers is very high, every hairdresser should take mandatory breaks. The time of a mandatory break for each hairdresser is when the hundreds digit in the time number coincides with the hairdresser’s number. For example, the hairdresser with number $5$ has to take a break in the time intervals $[500..599]$, $[1500..1599]$, $[2500..2599]$, etc. During a break, hairdresser is forbidden to serve a client. In addition, customer appointment cannot be divided in stages, i.e. customer can only be served by one hairdresser without any breaks. Consequently, a hairdresser cannot start to serve a client, if the service cannot be finished before the break starts.
+Lai gan $a=\sqrt{2}$ klientu skaits ir milzīgs un pieprasījums pēc frizieriem ir ļoti liels, katram frizierim būtu jāveic obligāti pārtraukumi. Obligātā pārtraukuma laiks katram frizierim ir tad, kad simtiem ciparu laika numurā sakrīt ar friziera numuru. Piemēram, frizierim ar numuru $5$ ir jāpārtrauc $[500..599]$, $[1500..1599]$, $[2500..2599]$ utt. laika intervāli. Pārtraukuma laikā frizierim ir aizliegts apkalpot klientu. Turklāt klienta tikšanos nevar sadalīt pa posmiem, t. i., klientu var apkalpot tikai viens frizieris bez pārtraukumiem. Līdz ar to frizieris nevar sākt apkalpot klientu, ja pakalpojumu nevar pabeigt pirms pārtraukuma sākuma.
 
-A customer should be served without delay if there is an unoccupied hairdresser and she/he does not have any limitations regarding this work. Upon finishing work with the current client, a hairdresser should immediately try to start serving the next one. More precisely: a client $C_1$ shows up at the time moment $T_1$ and his appointment needs time (serving duration) $D_1$. The hairdresser $H_1$ is currently free. Consequently, this appointment will take place during time interval $[T_1..T_1+D_1-1]$. The appointment is finished at the time moment $T_1+ D_1-1$. If a customer $C_2$ has already shown up before or exactly during time moment $T_1+D_1$, then hairdresser $H_1$ can start working with customer $C_2$ at the time moment $T_1+ D_1$.
+Klients nekavējoties jāapkalpo, ja ir neaizņemts frizieris un viņam/viņai nav nekādu ierobežojumu attiecībā uz šo darbu. Pabeidzot darbu ar pašreizējo klientu, frizierim nekavējoties jāmēģina sākt nākamā klienta apkalpošanu. Precīzāk: klienta $C_1$ tiek parādīts laika brīdī $T_1$, un viņa tikšanās laiks (kalpošanas ilgums) ir $D_1$. Friziera $H_1$ pašlaik ir bez maksas. Tādējādi šī iecelšana notiks laika intervāla $[T_1..T_1+D_1-1]$ laikā. Tikšanās ir pabeigta brīdī $T_1+ D_1-1$. Ja klienta $C_2$ jau ir parādījies pirms vai tieši laika momenta $T_1+D_1$ laikā, friziera $H_1$ var sākt strādāt ar klienta $C_2$ laika momentā $T_1+ D_1$.
