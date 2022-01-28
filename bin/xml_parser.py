@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
+import xml.etree.ElementTree as ET
 import configparser
 import requests
-import time
-import sys
 import re
 
 id_dict = dict() # vārdnīca atbilstošajām id formulām
@@ -67,27 +66,22 @@ def xliff_translate(text): #funkcija sarunājas ar tildi - iztulko no angļu uz 
     t2 = replace_id_by_tex(t)
     return t2
 
+def innertext(tag):
+    return (tag.text or '') + ''.join(innertext(e) for e in tag) + (tag.tail or '')
+
 def main():
-    if len(sys.argv) < 2:
-        print ("Kļūda! Vajag norādīt faila vārdu!")
-        exit(1)
-    else:
-        filename = sys.argv[1]
-    with open(filename, 'r', encoding='UTF-8') as file:
-        xliff = file.read()
-
-    xliff_translated = xliff
-
-    rx_source = re.compile(r'<source xml:lang="en">((.|\n|\r)*?)</source>', re.MULTILINE)
-    for chunk in rx_source.finditer(xliff):
-        translation = xliff_translate(chunk.group(1))
-        print('Translation12 = {} '.format(translation))
-        time.sleep(0.5)
-        xliff_translated = xliff_translated.replace(chunk.group(1) + "</target>", translation + "</target>")
-    print(sys.argv[1])
-    with open(sys.argv[1], 'wb') as f:
-        f.write(xliff_translated.encode('utf-8'))
-
+    mytree = ET.parse('../test-standalone/manual.md.xlf')
+    myroot = mytree.getroot()
+    #elm = myroot.find(".//target")
+    #for translation in myroot.findall('.//{urn:oasis:names:tc:xliff:document:1.2}target'):
+        #print(translation.text)
+    for Def in myroot.findall('.//{urn:oasis:names:tc:xliff:document:1.2}trans-unit'):
+        print("AAAAAAAAAA")
+        source = Def.find('{urn:oasis:names:tc:xliff:document:1.2}source')
+        print(innertext(source))
+        #source_text = Def.find('{urn:oasis:names:tc:xliff:document:1.2}source').text
+        #Def.find('{urn:oasis:names:tc:xliff:document:1.2}target').text = xliff_translate(source_text)
+    #print(ET.tostring(myroot, encoding='unicode'))
 
 if __name__ == '__main__':
     main()
