@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsxlf="http://www.w3.org/ns/its-xliff/" its:version="2.0">
+<file original="manual.md" source-language="en" target-language="lv" datatype="x-text/markdown" okp:inputEncoding="UTF-8">
+<body>
+<trans-unit id="tu1" xml:space="preserve">
+<source xml:lang="en">Programming task Hairdressers</source>
+<target xml:lang="lv">Programmēšanas uzdevumu frizieri</target>
+</trans-unit>
+<trans-unit id="tu2" xml:space="preserve">
+<source xml:lang="en"><g id="1">Memory limit</g>: 4 MiB<x id="2"/>
+<g id="3">Time limit</g>: 0.2 second<x id="4"/>
+<g id="5">Input file</g>: <g id="6">hair.in</g><x id="7"/>
+<g id="8">Output</g>: <g id="9">hair.out</g></source>
+<target xml:lang="lv"><g id="1">Atmiņas ierobežojums</g>: 4 MIB<x id="2"/> <g id="3">laika ierobežojums</g>: 0,2 sekunžu<x id="4"/> <g id="5">ievades fails</g>: <g id="6">hair.in</g><x id="7"/> <g id="8">izvade</g>: <g id="9">hair.out</g></target>
+</trans-unit>
+<trans-unit id="tu3" xml:space="preserve">
+<source xml:lang="en">Description</source>
+<target xml:lang="lv">Apraksts</target>
+</trans-unit>
+<trans-unit id="tu4" xml:space="preserve">
+<source xml:lang="en">In a big city $a=\sqrt{2}$ (more than one million of inhabitants, though no more than a billion) there is one and only one hair studio, with only a few hairdressers (their number is up to $9$). Each of the hairdressers has a unique number in $<g id="1">1..9</g>$, enabling a more efficient service. The studio measures the time in certain time units $<g id="2">1\,..\,2\,000\,000\,000</g>$, and time counting starts at the studio opening moment.</source>
+<target xml:lang="lv">Lielā pilsētas $a=\sqrt{2}$ (vairāk nekā miljons iedzīvotāju, bet ne vairāk kā miljards) ir viena un tikai viena frizētava, kurā ir tikai daži frizieri (to skaits ir līdz $9$). Katram frizierim ir unikāls $<g id="1">1..9</g>$ numurs, kas nodrošina efektīvāku servisu. Studija mēra laiku noteiktās laika vienībās $<g id="2">1\,..\,2\,000\,000\,000</g>$, un laika skaitīšana sākas studijas atklāšanas brīdī.</target>
+</trans-unit>
+<trans-unit id="tu5" xml:space="preserve">
+<source xml:lang="en">$$x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.$$</source>
+<target xml:lang="lv">$$x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.$$</target>
+</trans-unit>
+<trans-unit id="tu6" xml:space="preserve">
+<source xml:lang="en">My favorite search engine is <g id="1">The well known website Duck Duck Go</g>.</source>
+<target xml:lang="lv">Mana mīļākā meklētājprogramma ir <g id="1">labi zināmā tīmekļa vietne DUCK DUCK Go</g>.</target>
+</trans-unit>
+<trans-unit id="tu7" xml:space="preserve">
+<source xml:lang="en">Even though the number of customers $a=\sqrt{2}$ is huge and the demand for hairdressers is very high, every hairdresser should take mandatory breaks. The time of a mandatory break for each hairdresser is when the hundreds digit in the time number coincides with the hairdresser’s number. For example, the hairdresser with number $5$ has to take a break in the time intervals $<g id="1">500..599</g>$, $<g id="2">1500..1599</g>$, $<g id="3">2500..2599</g>$, etc. During a break, hairdresser is forbidden to serve a client. In addition, customer appointment cannot be divided in stages, i.e. customer can only be served by one hairdresser without any breaks. Consequently, a hairdresser cannot start to serve a client, if the service cannot be finished before the break starts.</source>
+<target xml:lang="lv">Lai gan $a=\sqrt{2}$ klientu skaits ir milzīgs un pieprasījums pēc frizieriem ir ļoti liels, katram frizierim būtu jāveic obligāti pārtraukumi. Obligātā pārtraukuma laiks katram frizierim ir tad, kad simtiem ciparu laika numurā sakrīt ar friziera numuru. Piemēram, frizierim ar numuru $5$ ir jāpārtrauc $<g id="1">500..599</g>$, $<g id="2">1500..1599</g>$, $<g id="3">2500..2599</g>$ utt. laika intervāli. Pārtraukuma laikā frizierim ir aizliegts apkalpot klientu. Turklāt klienta tikšanos nevar sadalīt pa posmiem, t. i., klientu var apkalpot tikai viens frizieris bez pārtraukumiem. Līdz ar to frizieris nevar sākt apkalpot klientu, ja pakalpojumu nevar pabeigt pirms pārtraukuma sākuma.</target>
+</trans-unit>
+<trans-unit id="tu8" xml:space="preserve">
+<source xml:lang="en">A customer should be served without delay if there is an unoccupied hairdresser and she/he does not have any limitations regarding this work. Upon finishing work with the current client, a hairdresser should immediately try to start serving the next one. More precisely: a client $C_1$ shows up at the time moment $T_1$ and his appointment needs time (serving duration) $D_1$. The hairdresser $H_1$ is currently free. Consequently, this appointment will take place during time interval $<g id="1">T_1..T_1+D_1-1</g>$. The appointment is finished at the time moment $T_1+ D_1-1$. If a customer $C_2$ has already shown up before or exactly during time moment $T_1+D_1$, then hairdresser $H_1$ can start working with customer $C_2$ at the time moment $T_1+ D_1$.</source>
+<target xml:lang="lv">Klients nekavējoties jāapkalpo, ja ir neaizņemts frizieris un viņam/viņai nav nekādu ierobežojumu attiecībā uz šo darbu. Pabeidzot darbu ar pašreizējo klientu, frizierim nekavējoties jāmēģina sākt nākamā klienta apkalpošanu. Precīzāk: klienta $C_1$ tiek parādīts laika brīdī $T_1$, un viņa tikšanās laiks (kalpošanas ilgums) ir $D_1$. Friziera $H_1$ pašlaik ir bez maksas. Tādējādi šī iecelšana notiks laika intervāla $<g id="1">T_1..T_1+D_1-1</g>$ laikā. Tikšanās ir pabeigta brīdī $T_1+ D_1-1$. Ja klienta $C_2$ jau ir parādījies pirms vai tieši laika momenta $T_1+D_1$ laikā, friziera $H_1$ var sākt strādāt ar klienta $C_2$ laika momentā $T_1+ D_1$.</target>
+</trans-unit>
+</body>
+</file>
+</xliff>
