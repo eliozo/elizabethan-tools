@@ -130,6 +130,7 @@ dmypy.json
 
 # Tikal generated files
 *.xlf
+!test-standalone/manual.md.xlf
 .idea/
 properties.txt
 main.py
