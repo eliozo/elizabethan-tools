@@ -50,6 +50,21 @@ salabot.bat manual.out.md
 pandoc -s -o manual_en.docx manual.md
 pandoc -s -o manual_lv.docx manual.out.md
 ```
+
+### Alternatīvās komandas
+
+```
+tikal.bat -x -sl EN -tl LV manual_en.docx 
+tulkot.bat manual_en.docx.xlf  
+tikal.bat -m manual_en.docx.xlf -sl EN -tl LV -ie utf-8
+```
+
+```
+tikal.bat -x -sl EN -tl LV manual_en.pdf 
+tulkot.bat manual_en.pdf.xlf  
+tikal.bat -m manual_en.pdf.xlf -sl EN -tl LV -ie utf-8
+```
+
 ### Rīka iespējas 
 
 Rīks pazīst un iztulko Markdown latviešu valodā un saglabā teksta formatējumu.
