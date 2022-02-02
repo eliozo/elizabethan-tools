@@ -58,7 +58,7 @@ Rīks pazīst un iztulko Markdown latviešu valodā un saglabā teksta formatēj
 * Pilna platuma (block) matemātiskas formulas
 * Tekstā iekļautās hipersaites - tulko saites tekstu, bet netulko URL adresi
 * Rindu pārnesumi ar diviem tukšumiem (procesā)
-
+* Var tulkot alt tekstu attēliem
 
 ```txt
 Tekstā iekļautās formulas piemērs: $y=f(x)$

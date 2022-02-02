@@ -3,6 +3,8 @@ import xml.etree.ElementTree as ET
 import configparser
 import requests
 import re
+import lxml.etree as etree
+from io import StringIO, BytesIO
 
 id_dict = dict() # vārdnīca atbilstošajām id formulām
 def replace_tex_by_id(text):
@@ -69,7 +71,33 @@ def xliff_translate(text): #funkcija sarunājas ar tildi - iztulko no angļu uz 
 def innertext(tag):
     return (tag.text or '') + ''.join(innertext(e) for e in tag) + (tag.tail or '')
 
+def myfun(arg):
+    if type(arg) == 'NoneType':
+        return ''
+    else:
+        return arg
+
+def test():
+    # src = "<p>this is <b>the</b> good stuff</p>"
+    # tree = etree.parse(StringIO(src))
+    # node = tree.xpath("//p")[0]
+    #
+    # result = node.text + ''.join(etree.tostring(e).decode("utf-8") for e in node)
+    # #result = node.text + ''.join('123' for e in node)
+    # print(result)
+    root = etree.parse('../test-standalone/manual.md.xlf')
+    # Print the loaded XML
+    # print(etree.tostring(root))
+    for trans_unit in root.findall('.//{urn:oasis:names:tc:xliff:document:1.2}trans-unit'):
+        print("AAAAAAAAAA")
+        source = trans_unit.find('{urn:oasis:names:tc:xliff:document:1.2}source')
+        result = myfun(source.text) + ''.join(myfun(etree.tostring(e)).decode("utf-8") for e in source)
+        print(result)
+        # print(innertext(source))
+
 def main():
+    test()
+    exit(0)
     mytree = ET.parse('../test-standalone/manual.md.xlf')
     myroot = mytree.getroot()
     #elm = myroot.find(".//target")
