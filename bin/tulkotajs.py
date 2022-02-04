@@ -5,11 +5,8 @@ import time
 import sys
 import re
 
-id_dict = dict() # vārdnīca atbilstošajām id formulām
-def replace_tex_by_id(text):
-    global id_dict
+def replace_tex_by_id(text,id_dict):
     count = 1  # skaitītājs unikālu id veidošanai
-
     pattern_block = re.compile(r"\$\$[^\$]+\$\$") # meklējam visas block latex formulas
     formulas_block = pattern_block.findall(text)
     for formula in formulas_block:
@@ -29,15 +26,14 @@ def replace_tex_by_id(text):
         count +=1
     return text
 
-def replace_id_by_tex(text):
-    global id_dict
+
+def replace_id_by_tex(text,id_dict):
     for key in id_dict:
         formula = id_dict[key]
         text = text.replace(key, formula, 1)
     return text
 
-def xliff_translate(text): #funkcija sarunājas ar tildi - iztulko no angļu uz latviešu
-    global id_dict
+def xliff_translate(text,id_dict): #funkcija sarunājas ar tildi - iztulko no angļu uz latviešu
     id_dict.clear()
     text_snippet = text
     if len(text) > 20:
@@ -49,7 +45,7 @@ def xliff_translate(text): #funkcija sarunājas ar tildi - iztulko no angļu uz 
     client_id = configParser.get('your-config', 'client_id')
     system_id = configParser.get('your-config', 'system_id')
     service_url = configParser.get('your-config', 'service_url')
-    text2 = replace_tex_by_id(text)
+    text2 = replace_tex_by_id(text,id_dict)
     response = requests.post(service_url,
                              headers={'Content-Type': 'application/json',
                                       'client-id': client_id},
@@ -64,10 +60,11 @@ def xliff_translate(text): #funkcija sarunājas ar tildi - iztulko no angļu uz 
         print(e.response.content)
     data = response.json()
     t = data['translation']
-    t2 = replace_id_by_tex(t)
+    t2 = replace_id_by_tex(t,id_dict)
     return t2
 
 def main():
+    id_dict = dict() # vārdnīca atbilstošajām id formulām
     if len(sys.argv) < 2:
         print ("Kļūda! Vajag norādīt faila vārdu!")
         exit(1)
@@ -80,7 +77,7 @@ def main():
 
     rx_source = re.compile(r'<source xml:lang="en">((.|\n|\r)*?)</source>', re.MULTILINE)
     for chunk in rx_source.finditer(xliff):
-        translation = xliff_translate(chunk.group(1))
+        translation = xliff_translate(chunk.group(1),id_dict)
         print('Translation12 = {} '.format(translation))
         time.sleep(0.5)
         xliff_translated = xliff_translated.replace(chunk.group(1) + "</target>", translation + "</target>")
