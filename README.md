@@ -5,6 +5,13 @@
 
 **Elizabete Ozoliņa, LU Datorikas fakultātes 2.kursa studente**
 
+inline_formula = $x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.$
+
+pilna_platuma_formula = 
+
+
+$$x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.$$  
+
 **Apraksts.**
 
 Šajā projektā ir iekļauti rīki, kuri spēj tulkot Markdown marķējumā rakstītus dokumentus.   
